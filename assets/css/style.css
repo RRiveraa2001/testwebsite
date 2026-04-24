@@ -1,0 +1,149 @@
+.full-width-logo {
+    width: 100%;          /* Stretch image edge-to-edge */
+    height: auto;         /* Maintain aspect ratio */
+    display: block;       /* Removes any inline spacing */
+    margin-bottom: 50px;  /* Adds space below image */
+}
+.full-width-logo {
+    width: 100%;          /* Stretch image edge-to-edge */
+    height: auto;         /* Maintain aspect ratio */
+    display: block;       /* Removes any inline spacing */
+    margin-bottom: 50px;  /* Adds space below image */
+}
+/* Circle for Contact */
+
+/* Make entire card clickable */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Rounded card with hover gradient */
+.support-card {
+    width: 350px;                 /* Make card compact */
+    margin: 20px auto;            /* Center the card horizontally */
+    text-align: center;            /* Center all text and elements */
+    border-radius: 14px;
+    background: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Gradient overlay */
+.support-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, #dc3545, #ffffff);
+    background-size: 600% 600%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+/* Show gradient and animate on hover */
+.support-card:hover::before {
+    opacity: 1;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* Keep content above gradient */
+.support-content {
+    display: flex;
+    flex-direction: column;      /* Stack vertically */
+    align-items: center;         /* Center horizontally */
+    gap: -2px;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+}
+
+/* Profile picture */
+.support-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dc3545;
+}
+
+/* Text and button */ 
+.support-text h3 { 
+    margin: 15px; 
+} 
+.support-text p {
+     margin: 10px;
+    
+    }
+
+.support-btn {
+    padding: 15px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover pop */
+.support-card:hover .support-btn {
+    transform: scale(1.07);
+    background-color: #7e7e85;
+}
+
+/* Card hover lift */
+.support-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#home .feature-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+#home .feature-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, #dc3545, #ffffff);
+    background-size: 600% 600%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+#home .feature-thumb:hover::before {
+    opacity: 1;
+    animation: gradientShift 5s ease infinite;
+}
+
+#home .feature-thumb h2,
+#home .feature-thumb p {
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* Payment Button */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
